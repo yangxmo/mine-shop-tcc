@@ -1,0 +1,35 @@
+{
+    "name": "yangxmo/mine-shop-tcc",
+    "description": "基于Hyperf框架的TCC分布式事务组件",
+    "authors": [
+        {
+            "name": "since",
+            "email": "529393997@qq.com"
+        }
+    ],
+    "homepage":"https://github.com/yangxmo/hyperf-tcc",
+    "license": "MIT",
+    "keywords": [
+        "hyperf",
+        "tcc",
+        "transaction"
+    ],
+    "require": {
+        "hyperf/nsq": "~3.0.0",
+        "hyperf/redis": "~3.0.0",
+        "hyperf/database": "~3.0.0",
+        "hyperf/snowflake": "~3.0.0",
+        "hyperf/logger": "~3.0.0",
+        "hyperf/db-connection": "~3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tcc\\TccTransaction\\": "src/"
+        }
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Tcc\\TccTransaction\\ConfigProvider"
+        }
+    }
+}
